@@ -4,7 +4,7 @@
             @foreach ($sliders as $slider)
                 <div class="slide-item"
                     style="
-              background-image: linear-gradient(
+              background: linear-gradient(
                   rgba(27, 40, 92, 0.7),
                   rgba(28, 35, 61, 0.7)
                 ),

@@ -42,11 +42,12 @@ class HomeController extends Controller
         }
         if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%testimonial%")->where('page_type','Group')->latest()->first()!=null){
             $testimonial_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%testimonial%")->where('page_type','Group')->latest()->first()->id;
-            $testimonial = Navigation::query()->where('parent_page_id',$testimonial_id)->latest()->first();
+            $testimonial = Navigation::query()->where('parent_page_id',$testimonial_id)->latest()->get();
         }
         else{
-            $testimonial = null;
+            $testimonial = [];
         }
+        // return $testimonial;
         if(Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%banner%")->where('page_type','Group')->latest()->first()!=null){
             $banner_id = Navigation::query()->where('nav_category','Home')->where('nav_name', 'LIKE', "%banner%")->where('page_type','Group')->latest()->first()->id;
             $banners = Navigation::query()->where('parent_page_id',$banner_id)->latest()->get();
@@ -89,6 +90,7 @@ class HomeController extends Controller
         $global_setting = GlobalSetting::all()->first(); 
         //return $missons;       
         return view("website.index")->with(['testimonial'=>$testimonial,'statistics'=>$statistics,'partners'=>$partners,'jobs'=>$jobs,'banners'=>$banners,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders,'missons'=>$missons,'job_categories'=>$job_categories,'message'=>$message,'process'=>$process]);
+    
     }
     public function category($menu){
         //return $menu." this is category";
