@@ -14,7 +14,8 @@
                  <h1>{{ $normal->caption }}</h1>
              </div>
              <ul class="page-breadcrumb">
-                 <li><a href="index-2.html">Home</a></li>
+                 <li><a href="/">Home</a></li>
+                 {{-- <li>{{ $normal->$slug }}</li> --}}
 
                  <li>{{ $normal->caption }}</li>
              </ul>

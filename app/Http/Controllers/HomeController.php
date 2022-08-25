@@ -191,6 +191,7 @@ class HomeController extends Controller
         else{
             $category_type = null;
         }
+      
         if($category_type == "Photo Gallery"){
             //return "return to page gallary";
             $photos = Navigation::query()->where('parent_page_id',$category_id)->where('page_status','1')->latest()->get();
@@ -217,6 +218,13 @@ class HomeController extends Controller
             //return $category_id;
             $normal = Navigation::find($category_id);
             return view("website.normal")->with(['message'=>$message,'normal'=>$normal,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
+
+        } elseif ($category_type == "client") {
+            //return $category_id;
+            $client = Navigation::find($category_id);
+            // return $client;
+            return view("website.client")->with(['message' => $message, 'client' => $client, 'jobs' => $jobs, 'menus' => $menus, 'sliders' => $sliders, 'about' => $About, 'global_setting' => $global_setting, 'slug_detail' => $slug_detail]);
+            
         }
         else{
             if($jobs!=null){            
@@ -364,6 +372,10 @@ class HomeController extends Controller
         elseif($subcategory_type == "Normal"){
             $normal = Navigation::find($subcategory_id);
             return view("website.normal")->with(["partners"=>$partners,'message'=>$message,'normal'=>$normal,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
+
+           
+
+
         }
         
         elseif($subcategory_type == "Group"){
