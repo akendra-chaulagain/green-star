@@ -1,6 +1,5 @@
 @extends('layouts.master')
     @section("content")
-        @include("website.navbar");
 			<!--
 			=====================================================
 				Google Map
@@ -86,7 +85,7 @@
 			        </div>
 			    </div> <!-- End of .alert_wrapper -->
 			</div> <!-- /.contact-us-section -->
-   @include("website.company_partner")
+
     @endsection
     
 

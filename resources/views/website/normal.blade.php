@@ -27,26 +27,26 @@
          <div class="auto-container">
              <div class="row clearfix">
                  <!-- Content Column -->
-                 <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                 <div
+                     class=" @if ($normal->banner_image != null) content-column col-lg-6 col-md-12 col-sm-12 @else  col-lg-12 col-md-12 col-sm-12 @endif">
                      <div class="inner-column">
                          <h2> <span>{{ $normal->caption }}</span> </h2>
                          <div class="text">{!! $normal->long_content !!}</div>
-
-
                      </div>
                  </div>
 
                  <!-- Video Column -->
-                 <div class="video-column col-lg-6 col-md-12 col-sm-12">
+                 @if ($normal->banner_image != null)
+                     <div class="video-column col-lg-6 col-md-12 col-sm-12">
 
-                   
-                     <div class="inner-column">
-
-                         <figure class="image wow fadeIn" data-wow-delay="600ms"><img src="{{ $normal->banner_image }}"
-                                 alt="banner_image">
-                         </figure>
+                         <div class="inner-column">
+                             <figure class="image wow fadeIn" data-wow-delay="600ms"><img src="{{ $normal->banner_image }}"
+                                     alt="banner_image">
+                             </figure>
+                         </div>
                      </div>
-                 </div>
+                 @endif
+
 
              </div>
          </div>

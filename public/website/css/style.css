@@ -2241,9 +2241,9 @@ display: none;
   width: 100%;
 }
 .service-block .inner-box img {
-     min-height: 181px;
-    max-height: 186px;
-    object-fit: cover;
+     min-height: 180px;
+    max-height: 180px;
+    
 }
 
 .service-block .inner-box .overlay-box:before {
@@ -9965,12 +9965,25 @@ display: none;
 
 
 .job_cat_box{
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  border-bottom: 1px solid whitesmoke;
   display: flex;
-  max-height: 160px;
-  min-height: 160px;
+  
 }
 
+.job_cat_box img{
+  padding: 30px;
+}
+@media only screen and (max-width: 990px) {
+ .job_cat_box img{
+  padding: 0px;
+}
+}
+@media only screen and (max-width: 575px) {
+ .single_job_text h6{
+  margin-top: 20px;
+}
+}
 
 .job_cat_data_right,
 .job_cat_data{
@@ -10003,4 +10016,67 @@ text-decoration: none;
 
 .single_job_text .fa-map-marker{
   margin-right: 10px;
+}
+
+.title-column h2{
+  display: flex;
+  justify-content: center;
+}
+
+/*client design------*/
+.clients-list {
+  position: relative;
+  margin-bottom: 30px;
+}
+.clients-list h5 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 5px;
+  color: #ff1616;
+}
+.clients-list ul {
+  list-style-type: none;
+  position: relative;
+  padding-left: 15px;
+}
+.clients-list ul li {
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 32px;
+  color: #074faf;
+  position: relative;
+  padding-left: 10px;
+}
+.clients-list ul li:before {
+  content: "\25BA \0020";
+  position: absolute;
+  color: #b57c06;
+  top: 0;
+  left: -15px;
+}
+.why-us-list {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  grid-gap: 1rem;
+}
+.why-us-list .clients-list {
+  padding: 0;
+}
+.why-us-list .clients-list ul {
+  list-style: none;
+  padding: 0;
+}
+@media (max-width: 991px) {
+  .why-us-list {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+@media (max-width: 767px) {
+  .why-us-list {
+    grid-template-columns: repeat(1, 100%);
+    grid-gap: 0;
+  }
+  .why-us-list .clients-list {
+    margin-bottom: 0;
+  }
 }

@@ -1,12 +1,10 @@
 <div class="sidebar-page-container">
     <div class="auto-container">
-        <div class="inner-column">
+        <div class="title-column">
             <h2 style="color:#6EBB3E "> <span>JOB CATEGORY</span> </h2>
 
         </div>
         <div class="row clearfix">
-
-
             @foreach ($job_categories as $cat)
                 <div class="service-block col-lg-3 col-md-6 col-sm-6 col-12  mt-4">
                     <div class="inner-box">

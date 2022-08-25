@@ -162,6 +162,9 @@ if (isset($normal)) {
                                             </li>
                                         @endforeach
 
+
+                                        <li><a href="/contact">Contact</a></li>
+
                                         <!-------menu closed--->
                                     </ul>
                                 </div>

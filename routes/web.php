@@ -109,3 +109,8 @@ Route::POST('contact/store',[ContactController::class,'ContactStore'])->name('co
 
 Route::get('/{slug}',[HomeController::class,'category'])->name('category');
 Route::get('/{category}/{subcategory}',[HomeController::class,'subcategory'])->name('subcategory');
+
+
+
+// website contact page
+// Route::get('/contact', [HomeController::class, 'viewWebsiteContact'])->name('viewContact');

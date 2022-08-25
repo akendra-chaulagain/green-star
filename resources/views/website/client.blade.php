@@ -19,108 +19,129 @@
      <!--End Page Title-->
 
      <!-- Projects Section -->
-     <section class="projects-section style-two">
-         <div class="auto-container">
-             <div class="mixitup-gallery">
-                 <div class="filters clearfix">
-                     <ul class="filter-tabs filter-btns clearfix">
-                        {{-- @foreach ($partners as $item)
-                             <li class="filter active" data-role="button" data-filter="all">{{ $item->caption }}</span>
-                         </li>
-                        @endforeach
-                         --}}
-                         <li class="filter" data-role="button" data-filter=".lawn-care">Saudi Arabic</span>
-                         </li>
-                         <li class="filter" data-role="button" data-filter=".garden-care">Quatar</span>
+     <div class="about-compnay section-spacing">
+         <div class="container">
+             <div class="row">
+                 <div class=" col-lg-12 col-12 text order-lg-last ">
+                     <div class="theme-title-one mb-20">
+                         <h2>Clients</h2>
+                     </div> <!-- /.theme-title-one -->
+                     <p class="mb-20">
+                     {{-- <div class="row">
+                         <div class="col-lg-4 col-md-6 col-sm-6">
+                             <div class="clients-list">
+                                 <h5>Kingdom Of Bahrain</h5>
 
-                     </ul>
-                 </div>
-
-                 <div class="filter-list row clearfix">
-                     <!-- Project Block -->
-                     <div class="project-block mix all col-lg-2 col-md-4 col-sm-6  col-4">
-                         <div class="image-box">
-                             <figure class="image"><img src="website/images/client/2.png" alt=""></figure>
-
+                                 <ul>
+                                     <li>Altrade Group</li>
+                                     <li>Nass Scafform Contracting WLL</li>
+                                     <li>Hertel WLL</li>
+                                     <li>EBRAHIMK . KANOO</li>
+                                     <li>The Kingdom Group</li>
+                                     <li>Shaheen Group</li>
+                                     <li>Jawad Business Group</li>
+                                     <li>Kooheji Contractors WLL</li>
+                                     <li>The Nass Group</li>
+                                     <li>Arcal WLL</li>
+                                     <li>Haji Hassan Group</li>
+                                     <li>Cebarco WCT WLL</li>
+                                     <li>Al Jazeera Sweets &amp; Pickle Factory</li>
+                                     <li>Gamuda Berhad</li>
+                                     <li>The Sultan Center</li>
+                                     <li>AhamadMansoor Al Ali Co WLL</li>
+                                     <li>Yum Yum Tree Food Court</li>
+                                     <li>BBGM Bahrain Food and Leisure Co</li>
+                                     <li>Mercure Grand Hotel</li>
+                                     <li>Jassim Trading &amp;Agroserve</li>
+                                     <li>Arabian Sugar Company B.S.C</li>
+                                     <li>Air Tech WLL</li>
+                                     <li>SecuriCORE Security WLL</li>
+                                     <li>Alashoor Express Cargo</li>
+                                     <li>Jalal Al A’Ali&amp; Sons CO.B.S.C</li>
+                                 </ul>
+                             </div>
                          </div>
-                     </div>
 
-                     <!-- Project Block -->
-                     <div class="project-block mix all garden-care  snow-removal col-lg-2 col-md-4 col-sm-6 col-4">
-                         <div class="image-box">
-                             <figure class="image"><img src="website/images/client/41.jpg" alt=""></figure>
+                         <div class="col-lg-4 col-md-6 col-sm-6">
+                             <div class="clients-list">
+                                 <h5>Malaysia</h5>
 
+                                 <ul>
+                                     <li>Kelly Fresh Food Manufacturing SDN.BHD.</li>
+                                     <li>Inari SDN.BHD</li>
+                                     <li>Salad Boutique Restaurant</li>
+                                 </ul>
+                             </div>
+
+                             <div class="clients-list">
+                                 <h5>Kuwait</h5>
+
+                                 <ul>
+                                     <li>EissaEquipments</li>
+                                     <li>Flex Resort &amp; Real Estate</li>
+                                     <li>Jawad Business Group</li>
+                                     <li>Kuwaiti American Food Stuff. (Kafco)</li>
+                                     <li>The Sultan Center</li>
+                                 </ul>
+                             </div>
+
+                             <div class="clients-list">
+                                 <h5>Qatar</h5>
+
+                                 <ul>
+                                     <li>GroupAltrad</li>
+                                     <li>Nass Scafform Contracting WLL</li>
+                                     <li>Hertel WLL</li>
+                                     <li>Al Arab Trading &amp; Contracting Co. WLL</li>
+                                     <li>Jawad business Group</li>
+                                     <li>The Maintainers</li>
+                                     <li>Al Attiyah Architectural Group</li>
+                                     <li>Jamco Trading &amp; Contracting Co</li>
+                                     <li>Movenpick Hotel</li>
+                                     <li>Abdulla Nass Group</li>
+                                     <li>Noor Engineering Group WLL</li>
+                                 </ul>
+                             </div>
                          </div>
-                     </div>
 
-                     <!-- Project Block -->
-                     <div class="project-block mix all planting snow-removal col-lg-2 col-md-4 col-sm-6 col-4">
-                         <div class="image-box">
-                             <figure class="image"><img src="website/images/client/42.jpg" alt=""></figure>
+                         <div class="col-lg-4 col-md-6 col-sm-6">
+                             <div class="clients-list">
+                                 <h5>United Arab Emirates (UAE)</h5>
 
+                                 <ul>
+                                     <li>Altrade Group</li>
+                                     <li>Nass Scafform Services WILL</li>
+                                     <li>Hertel WLL</li>
+                                     <li>Jawad Business Group – Restaurant</li>
+                                     <li>Fashion, Logistics Divisions</li>
+                                     <li>Nass Scafform Services</li>
+                                 </ul>
+                             </div>
+
+                             <div class="clients-list">
+                                 <h5>Oman</h5>
+
+                                 <ul>
+                                     <li>Jawad Business Group – Restaurant, Fashion Division</li>
+                                     <li>The Sultan Centre</li>
+                                     <li>Oryx Metal Industries LLC</li>
+                                 </ul>
+                             </div>
+
+                             <div class="clients-list">
+                                 <h5>Kingdom of Saudi Arabia</h5>
+
+                                 <ul>
+                                     <li>Jawad Business Group – Sarroof International</li>
+                                     <li>Elaf Group of Hotel</li>
+                                     <li>ALQawaa Business group</li>
+                                 </ul>
+                             </div>
                          </div>
-                     </div>
-
-                     <!-- Project Block -->
-                     <div class="project-block mix all snow-removal lawn-care planting col-lg-2 col-md-4 col-sm-6 col-4">
-                         <div class="image-box">
-                             <figure class="image"><img src="website/images/client/43.jpg" alt=""></figure>
-
-                         </div>
-                     </div>
-
-                     <!-- Project Block -->
-                     <div class="project-block mix all snow-removal garden-care col-lg-2 col-md-4 col-sm-6 col-4">
-                         <div class="image-box">
-                             <figure class="image"><img src="website/images/client/45.jpg" alt=""></figure>
-
-                         </div>
-                     </div>
-
-                     <!-- Project Block -->
-                     <div class="project-block mix all garden-care planting lawn-care col-lg-2 col-md-4 col-sm-6 col-4">
-                         <div class="image-box">
-                             <figure class="image"><img src="website/images/client/47.jpg" alt=""></figure>
-
-                         </div>
-                     </div>
-
-                     <!-- Project Block -->
-                     <div class="project-block mix all lawn-care col-lg-2 col-md-4 col-sm-6 col-4">
-                         <div class="image-box">
-                             <figure class="image"><img src="website/images/client/46.jpg" alt=""></figure>
-
-                         </div>
-                     </div>
-
-                     <!-- Project Block -->
-                     <div class="project-block mix all garden-care planting col-lg-2 col-md-4 col-sm-6 col-4">
-                         <div class="image-box">
-                             <figure class="image"><img src="website/images/client/48.jpg" alt=""></figure>
-
-                         </div>
-                     </div>
-
-                     <!-- Project Block -->
-                     <div class="project-block mix all garden-care planting col-lg-2 col-md-4 col-sm-6 col-4">
-                         <div class="image-box">
-                             <figure class="image"><img src="website/images/client/6.jpg" alt=""></figure>
-
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </section>
-     <script src="website/js/jquery.js"></script>
-     <script src="website/js/popper.min.js"></script>
-     <script src="website/js/bootstrap.min.js"></script>
-     <script src="website/js/jquery.fancybox.js"></script>
-     <script src="website/js/owl.js"></script>
-     <script src="website/js/wow.js"></script>
-     <script src="website/js/jquery.mCustomScrollbar.concat.min.js"></script>
-     <script src="website/js/mixitup.js"></script>
-     <script src="website/js/isotope.js"></script>
-     <script src="website/js/appear.js"></script>
-     <script src="website/js/script.js"></script>
+                     </div> --}}
+                     </p>
+                 </div> 
+             </div> 
+         </div> 
+     </div> 
  @endsection

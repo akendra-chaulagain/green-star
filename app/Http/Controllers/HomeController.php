@@ -90,8 +90,15 @@ class HomeController extends Controller
         $global_setting = GlobalSetting::all()->first(); 
         //return $missons;       
         return view("website.index")->with(['testimonial'=>$testimonial,'statistics'=>$statistics,'partners'=>$partners,'jobs'=>$jobs,'banners'=>$banners,'about'=>$About,'menus'=>$menus,'global_setting'=>$global_setting,'sliders'=>$sliders,'missons'=>$missons,'job_categories'=>$job_categories,'message'=>$message,'process'=>$process]);
+
+        
     
     }
+
+
+
+
+
     public function category($menu){
         //return $menu." this is category";
         $menus = Navigation::query()->where('nav_category','Main')->where('page_type','!=','Job')->where('page_type','!=','Photo Gallery')->where('page_type','!=','Notice')->where('parent_page_id',0)->where('page_status','1')->orderBy('position','ASC')->get();
@@ -196,7 +203,7 @@ class HomeController extends Controller
         }
         elseif($category_type == "Job"){
             //return "return to view job";
-            return view("website.jobsCategory")->with(['jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
+            return view('website.jobsCategory')->with(['jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         elseif($category_type == "Notice"){
             // return "return to view Notice";
@@ -213,7 +220,7 @@ class HomeController extends Controller
         }
         else{
             if($jobs!=null){            
-                 return view("website.client")->with(['jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
+                 return view("website.job-list")->with(['jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
             }
             else{
                 return redirect('/');
@@ -221,6 +228,13 @@ class HomeController extends Controller
         }
 
     }
+
+
+
+
+
+
+
 
   public function subcategory($slug1,$submenu){
         $menus = Navigation::query()->where('nav_category','Main')->where('page_type','!=','Job')->where('page_type','!=','Photo Gallery')->where('page_type','!=','Notice')->where('parent_page_id',0)->where('page_status','1')->orderBy('position','ASC')->get();
@@ -351,9 +365,10 @@ class HomeController extends Controller
             $normal = Navigation::find($subcategory_id);
             return view("website.normal")->with(["partners"=>$partners,'message'=>$message,'normal'=>$normal,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
+        
         elseif($subcategory_type == "Group"){
             //return "return to job else";
-            return view("website.jobsCategory")->with(["partners"=>$partners,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
+            return view("website.job-list")->with(["partners"=>$partners,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         else{
             return redirect("/");
@@ -397,7 +412,7 @@ class HomeController extends Controller
          $jobs = Navigation::query()->where('page_type','Job')->latest()->get();
          $global_setting = GlobalSetting::all()->first(); 
          $menus = Navigation::query()->where('nav_category','Main')->where('page_type','!=','Job')->where('page_type','!=','Photo Gallery')->where('page_type','!=','Notice')->where('parent_page_id',0)->where('page_status','1')->orderBy('position','ASC')->get();
-         return view("website.jobsCategory")->with(['jobs'=>$jobs,'menus'=>$menus,'global_setting'=>$global_setting]);
+         return view("website.job-list")->with(['jobs'=>$jobs,'menus'=>$menus,'global_setting'=>$global_setting]);
     }
     public function GalleryView($slug){
         $navigataion_id = Navigation::where('nav_name',$slug)->first()->id;        
@@ -407,4 +422,13 @@ class HomeController extends Controller
          $menus = Navigation::query()->where('nav_category','Main')->where('page_type','!=','Job')->where('page_type','!=','Photo Gallery')->where('page_type','!=','Notice')->where('parent_page_id',0)->where('page_status','1')->orderBy('position','ASC')->get();
          return view("website.gallery_view")->with(['photos'=>$photos,'menus'=>$menus,'global_setting'=>$global_setting]);
     }
+
+
+    // contact page
+
+    
+
+
+
+
 }

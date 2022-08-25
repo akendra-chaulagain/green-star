@@ -20,6 +20,9 @@ use Mail;
 class ContactController extends Controller
 {
 
+
+    
+
     public function send(Request $request)
     {
         $data = $request->all();

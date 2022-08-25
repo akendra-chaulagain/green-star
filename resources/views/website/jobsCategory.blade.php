@@ -25,7 +25,7 @@
                   <div class="sec-title style-two">
                       <div class="row clearfix">
                           <div class="title-column col-lg-4 col-md-12 col-sm-12">
-                              <h2>
+                              <h2 style="color: #6ebb3e">
                                   @if (isset($slug_detail))
                                       {{ $slug_detail->caption ?? '' }}
                                   @endif
@@ -49,20 +49,20 @@
                                   <div class="row">
                                       <div class="col-sm-3">
                                           <div class="Job_img-box">
-                                              <a href="{{ route('single_job', $job->nav_name) }}"><img
-                                                      src="{{ $job->banner_image }}" alt=""></a>
+                                              <a href="{{ route('single_job', $job->nav_name) }}">
+                                                  <img src="{{ $job->banner_image }}" alt="banner_img"></a>
                                           </div>
                                       </div>
                                       <div class="col-sm-5 job_cat_data">
                                           <a href="{{ route('single_job', $job->nav_name) }}">
                                               <div class="single_job_text">
                                                   <h6>{{ $job->caption }}</h6>
-                                                  
+
                                                   <span
                                                       class="job_company mt-1">{{ $job->getJob->company_name ?? 'null' }}</span>
                                                   <span class="mt-1"><i
                                                           class="fa fa-map-marker "></i>{{ $job->getJob->country ?? 'null' }}</span>
-                                                  
+
                                               </div> <!-- /.text -->
                                           </a>
                                       </div>
