@@ -130,6 +130,7 @@
             <div class="clearfix"></div>
 
             <?php $page_types= App\Models\PageType::get(); ?>
+            
                 
             <div class="form-group col-md-12">
                 <label for="page_type">Page Type <i class="reqr">*</i></label>   

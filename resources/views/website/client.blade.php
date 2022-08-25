@@ -24,8 +24,11 @@
              <div class="mixitup-gallery">
                  <div class="filters clearfix">
                      <ul class="filter-tabs filter-btns clearfix">
-                         <li class="filter active" data-role="button" data-filter="all">Malaysia</span>
+                        {{-- @foreach ($partners as $item)
+                             <li class="filter active" data-role="button" data-filter="all">{{ $item->caption }}</span>
                          </li>
+                        @endforeach
+                         --}}
                          <li class="filter" data-role="button" data-filter=".lawn-care">Saudi Arabic</span>
                          </li>
                          <li class="filter" data-role="button" data-filter=".garden-care">Quatar</span>

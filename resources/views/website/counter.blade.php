@@ -4,44 +4,26 @@
 
                 <div class="row clearfix">
                     <!--Column-->
-                    <div class="column count-box col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner">
-                            <div class="count-outer count-box">
-                                <span class="count-text" data-speed="3000" data-stop="10">0</span>+
-                            </div>
-                            <div class="counter-title">Years of Experience</div>
-                        </div>
-                    </div>
+                   
 
-                    <!--Column-->
-                    <div class="column count-box col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner">
-                            <div class="count-outer count-box">
-                                <span class="count-text" data-speed="2000" data-stop="100">0 </span>+
-                            </div>
-                            <div class="counter-title">Success Rate</div>
-                        </div>
-                    </div>
+                    @if (isset($statistics))
+                        @foreach ($statistics as $stat)
+                           
 
-                    <!--Column-->
-                    <div class="column count-box col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner">
-                            <div class="count-outer count-box">
-                                <span class="count-text" data-speed="2000" data-stop="23">0 </span>
-                            </div>
-                            <div class="counter-title">Awards Holded</div>
-                        </div>
-                    </div>
 
-                    <!--Column-->
-                    <div class="column count-box col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner">
-                            <div class="count-outer count-box">
-                                <span class="count-text" data-speed="3000" data-stop="9">0 </span>
+
+                            <div class="column count-box col-lg-3 col-md-6 col-sm-12">
+                                <div class="inner">
+                                    <div class="count-outer count-box">
+                                        <span class="count-text" data-speed="3000" data-stop="{{ $stat->caption }}">0</span>{{ $stat->short_content }}+
+                                    </div>
+                                    <div class="counter-title">{{ $stat->long_content }}</div>
+                                </div>
                             </div>
-                            <div class="counter-title">Team Members</div>
-                        </div>
-                    </div>
+                        @endforeach
+                    @endif
+
+
                 </div>
             </div>
         </section>
