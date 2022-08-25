@@ -14,9 +14,9 @@
                         <div class="content-box">
                             <h2>{{ $slider->caption }}</h2>
                             <h4>{{ $slider->short_content }}</h4>
-                            <div class="link-box clearfix">
+                            {{-- <div class="link-box clearfix">
                                 <a href="about.html" class="theme-btn btn-style-one">Know About us</a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>

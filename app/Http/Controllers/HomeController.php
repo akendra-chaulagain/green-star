@@ -338,7 +338,7 @@ class HomeController extends Controller
         }
         elseif($subcategory_type == "Job"){
             //return "return to view job";
-            return view("website.job-list")->with(["partners"=>$partners,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
+            return view("website.jobsCategory")->with(["partners"=>$partners,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
         }
         elseif($subcategory_type == "Notice"){
             // return "return to view Notice";

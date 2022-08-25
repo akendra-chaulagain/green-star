@@ -145,10 +145,10 @@ if (isset($normal)) {
                                     <ul class="navigation clearfix">
                                         <!-------menu------>
                                         <li @if (!isset($slug_detail)) class="active" @endif><a
-                                                href="/">HOME</a></li>
+                                                href="/">Home</a></li>
                                         @foreach ($menus as $menu)
                                             @php $submenus = $menu->childs; @endphp
-                                            <li class="dropdown" @if (isset($slug_detail) && $slug_detail->nav_name == $menu->nav_name)  @endif><a
+                                            <li class="dropdowns" @if (isset($slug_detail) && $slug_detail->nav_name == $menu->nav_name)  @endif><a
                                                     @if ($submenus->count() > 0) href="#" @else href="{{ route('category', $menu->nav_name) }}" @endif>{{ $menu->caption }}</a>
                                                 @if ($submenus->count() > 0)
                                                     <ul>
@@ -189,7 +189,7 @@ if (isset($normal)) {
                             <div class="navbar-collapse show collapse clearfix">
                                 <ul class="navigation clearfix">
                                     <li><a href="index.html">Home</a></li>
-                                    <li class="dropdown"><a href="#">About Us</a>
+                                    <li class="dropdowns"><a href="#">About Us</a>
                                         <ul>
                                             <li><a href="about.html">About us</a></li>
                                             <li>
@@ -204,7 +204,7 @@ if (isset($normal)) {
 
                                         </ul>
                                     </li>
-                                    <li class="dropdown">
+                                    <li class="dropdowns">
                                         <a href="#">Services</a>
                                         <ul>
                                             <li><a href="services.html">Services</a></li>
@@ -218,7 +218,7 @@ if (isset($normal)) {
                                         <a href="client.html">Client</a>
 
                                     </li>
-                                    <li class="dropdown">
+                                    <li class="dropdowns">
                                         <a href="document.html">Documentt</a>
                                         <ul>
                                             <li><a href="document.html">Required Document</a></li>
