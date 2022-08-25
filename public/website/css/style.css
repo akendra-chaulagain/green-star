@@ -10085,41 +10085,31 @@ text-decoration: none;
 
 
 
+.jobDetails{
+  color: gray;
+}
+
+.jobDetails span{
+  margin-top: 20px;
+}
 
 
+.singleJobData button{
+  font-size: 16px;
+    line-height: 26px;
+    padding: 11px 19px;
+    background-color: #6ebb3e;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.singleJobData button a{
+  text-decoration: none;
+  color: white;
+}
 
 
 

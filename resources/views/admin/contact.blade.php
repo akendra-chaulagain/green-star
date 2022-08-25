@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
 
 
  <section class="page-title"
@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-contact-info">
-                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa fa-envelope"></i>
                         <h3>Email Us:</h3>
                         <a
                             href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#88e0ede4e4e7c8edf2e1e7a6ebe7e5"><span
@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-contact-info">
-                       <i class="fa-solid fa-phone-flip"></i>
+                       <i class="fa fa-phone"></i>
                         <h3>Call Us:</h3>
                         <a href="tel:+1-(123)-456-7890">Tel. +1 (123) 456 7890</a>
                         <a href="tel:+1-(514)-312-6678">Tel. +1 (514) 312-6678</a>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-contact-info">
-                       <i class="fa-solid fa-location-dot"></i>
+                       <i class="fa fa-location-arrow"></i>
                         <h3>London</h3>
                         <a href="#">9170 Millbrook Rd, Newark, IL 60541</a>
                     </div>

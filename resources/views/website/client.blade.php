@@ -27,22 +27,8 @@
                      </div> <!-- /.theme-title-one -->
                      <p class="mb-20">
                      <div class="row">
-                         {{-- @foreach ($client as $client_item)
-                        
-                             <div class="col-lg-4 col-md-6 col-sm-6">
-                                 <div class="clients-list">
-                                     <h5></h5>
-                                     <ul>
-                                         <li>Altrade Group</li>
-                                     </ul>
-                                 </div>
-                             </div>
-                         @endforeach --}}
-                             
-                        
-
-
-
+                      {{-- @dd($client) --}}
+                      @php echo $client->long_content @endphp
 
                      </div>
                      </p>
@@ -51,3 +37,4 @@
          </div>
      </div>
  @endsection
+
