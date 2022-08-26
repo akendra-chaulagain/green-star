@@ -32,7 +32,7 @@ if (isset($normal)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <!-----SEO--------->
 
-    <title>{{ $seo->page_titile ?? $global_setting->page_title }} || @stack('title') </title>
+    <title>{{ $seo->page_titile ?? $global_setting->page_title }} | @stack('title') </title>
     <meta name="title" content="{{ $seo->page_titile ?? $global_setting->page_title }}">
     <meta name="description" content="{{ $seo->page_description ?? $global_setting->page_description }}">
     <meta name="keywords" content="{{ $seo->page_keyword ?? $global_setting->page_keyword }}">
@@ -72,8 +72,7 @@ if (isset($normal)) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-{{--         
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
+
 
 </head>
 
@@ -87,11 +86,14 @@ if (isset($normal)) {
                         <div class="top-left">
                             <ul class="contact-list clearfix">
                                 <li>
-                                    <i class="flaticon-maps-and-flags"></i>Basundhara, Kathnandu
-                                    , Nepal
+                                    <i class="flaticon-maps-and-flags"></i>{{ $global_setting->website_full_address }}
+                                    {{ $global_setting->address_ne }}
                                 </li>
                                 <li>
-                                    <a href="#"><i class="flaticon-send"></i>greenstaroverseas@gmail.com</a>
+                                    {{-- <a href="#"><i class="flaticon-send"></i>greenstaroverseas@gmail.com</a> --}}
+
+                                    <i class="flaticon-send"></i><a style="text-decoration: none"
+                                        href="mailto:{{ $global_setting->site_email }}">{{ $global_setting->site_email }}</a>
                                 </li>
                             </ul>
                         </div>
@@ -122,15 +124,17 @@ if (isset($normal)) {
                     <div class="outer-container clearfix">
                         <div class="logo-box">
                             <div class="logo">
-                                <a href="index-2.html"><img src="website/images/logo.png" alt=""
-                                        title="" /></a>
+                                <a href="/"><img src="/uploads/icons/{{ $global_setting->site_logo }}"
+                                        alt="_logo" title="" /></a>
                             </div>
                         </div>
 
                         <!-- Call Btn -->
                         <div class="call-btn">
-                            <i class="flaticon-phone-1"></i> +997-1-4363546 <br /><i class="flaticon-phone-1"></i>
-                            +997-1-4363540
+                            <a style="text-decoration: none" href="tel:{{ $global_setting->phone }}">
+                                <i class="flaticon-phone-1"> </i> {{ $global_setting->phone }}
+                            </a>
+
                         </div>
 
                         <div class="nav-outer clearfix">
@@ -196,48 +200,29 @@ if (isset($normal)) {
                         <nav class="main-menu">
                             <div class="navbar-collapse show collapse clearfix">
                                 <ul class="navigation clearfix">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li class="dropdowns"><a href="#">About Us</a>
-                                        <ul>
-                                            <li><a href="about.html">About us</a></li>
-                                            <li>
-                                                <a href="about-nepal.html">About Nepal</a>
-                                            </li>
-                                            <li>
-                                                <a href="mission.html">Mission/Vision</a>
-                                            </li>
-                                            <li>
-                                                <a href="objectives.html">Objectives </a>
-                                            </li>
+                                    <!-------menu------>
+                                    <li @if (!isset($slug_detail)) class="active" @endif><a
+                                            href="/">Home</a></li>
+                                    @foreach ($menus as $menu)
+                                        @php $submenus = $menu->childs; @endphp
+                                        <li class="dropdowns" @if (isset($slug_detail) && $slug_detail->nav_name == $menu->nav_name)  @endif><a
+                                                @if ($submenus->count() > 0) href="#" @else href="{{ route('category', $menu->nav_name) }}" @endif>{{ $menu->caption }}</a>
+                                            @if ($submenus->count() > 0)
+                                                <ul>
+                                                    @foreach ($submenus as $sub)
+                                                        <li><a
+                                                                href="{{ route('subcategory', [$menu->nav_name, $sub->nav_name]) }}">{{ $sub->caption }}</a>
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
+                                            @endif
+                                        </li>
+                                    @endforeach
 
-                                        </ul>
-                                    </li>
-                                    <li class="dropdowns">
-                                        <a href="#">Services</a>
-                                        <ul>
-                                            <li><a href="services.html">Services</a></li>
-                                            <li>
-                                                <a href="working-process.html">Recruitment Process</a>
-                                            </li>
 
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="client.html">Client</a>
+                                    <li><a href="/contact">Contact</a></li>
 
-                                    </li>
-                                    <li class="dropdowns">
-                                        <a href="document.html">Documentt</a>
-                                        <ul>
-                                            <li><a href="document.html">Required Document</a></li>
-                                            <li>
-                                                <a href="demand-letter-example.html">Demand Letters Examples</a>
-                                            </li>
-
-                                        </ul>
-
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <!-------menu closed--->
                                 </ul>
                             </div>
                         </nav>
@@ -256,7 +241,7 @@ if (isset($normal)) {
                 <div class="footer-top clearfix">
                     <div class="top-right clearfix">
                         <div class="scroll-to-top scroll-to-target" data-target="html">
-                            <span class="flaticon-up-chevron"></span> Move to the Top
+                          
                         </div>
                     </div>
                 </div>
@@ -265,17 +250,13 @@ if (isset($normal)) {
                 <div class="widgets-section">
                     <div class="row clearfix">
                         <!--Footer Column-->
-                        <div class="footer-column col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-column col-lg-3 col-md-12 col-sm-12">
                             <div class="footer-widget logo-widget">
                                 <div class="footer_logo">
                                     <a href="index-2.html"><img src="website/images/logo.png" alt="" /></a>
                                 </div>
                                 <div class="text">
-                                    Green Star Overseas Pvt.Ltd. is a leading government recognized recruitment agency
-                                    in Nepal
-                                    providing all kind of manpower management services since 2001 from Nepal to
-                                    Malaysia, Saudi
-                                    Arabia, Dubai, Kuwait, Oman, Qatar and other Gulf companies
+                                    {{ $global_setting->page_description }}
                                 </div>
 
                                 <div class="copyright-text">
@@ -286,7 +267,7 @@ if (isset($normal)) {
                         </div>
 
                         <!--Footer Column-->
-                        <div class="footer-column col-lg-4 col-md-6 col-sm-12">
+                        <div class="footer-column col-lg-3 col-md-6 col-sm-12">
                             <div class="footer-widget lists-widget">
                                 <div class="footer-title">
                                     <h2>Usefull Links</h2>
@@ -295,31 +276,58 @@ if (isset($normal)) {
                                     <div class="row clearfix">
                                         <div class="column col-lg-6 col-md-6 col-sm-12">
                                             <ul class="footer-list">
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="about.html">About us</a></li>
-                                                <li><a href="about-nepal.html">About Nepal</a></li>
-                                                <li><a href="mission.html">Mission/Vision</a></li>
-                                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-
+                                                <li><a href="">Home</a></li>
+                                                @foreach ($normal_gallary_notice->where('page_type', '!=', 'Group') as $dat)
+                                                    <li><a
+                                                            href="{{ route('category', $dat->nav_name) }}">{{ $dat->caption }}</a>
+                                                    </li>
+                                                @endforeach
                                             </ul>
                                         </div>
 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- contact info --}}
+                        <div class="footer-column col-lg-4 col-md-6 col-sm-12">
+                            <div class="footer-widget lists-widget">
+                                <div class="footer-title">
+                                    <h2>Contact</h2>
+                                </div>
+                                <div class="widget-content">
+                                    <div class="row clearfix">
                                         <div class="column col-lg-6 col-md-6 col-sm-12">
-                                            <ul class="footer-list">
-                                                <li><a href="services.html"> Services</a></li>
-                                                <li><a href="working-process.html">Recruitment Process</a></li>
-                                                <li><a href="client.html">Client</a></li>
-                                                <li><a href="document.html">Required Document</a></li>
-                                                <li><a href="contact.html">Contact </a></li>
+                                            <ul>
+                                                <li>
+                                                    <i class="flaticon-direction-signs"></i>
+                                                    {{-- <span> </span> --}}
+                                                    {{ $global_setting->website_full_address }}
+                                                    {{ $global_setting->address_ne }}
+                                                </li>
+                                                <li>
+                                                    <i class="flaticon-multimedia-1"></i>
+                                                    <a
+                                                        href="mailto:{{ $global_setting->site_email }}">{{ $global_setting->site_email }}</a>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                                    <a
+                                                        href="tel:{{ $global_setting->phone }}">{{ $global_setting->phone }}</a>
+                                                    / <a
+                                                        href="tel:{{ $global_setting->phone_ne }}">{{ $global_setting->phone_ne }}</a>
+                                                </li>
                                             </ul>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!--Footer Column-->
-                        <div class="footer-column col-lg-4 col-md-6 col-sm-12">
+                        <div class="footer-column col-lg-2 col-md-6 col-sm-12">
                             <div class="footer-widget news-widget">
                                 <div class="footer-title">
                                     <h2>Follow us</h2>
@@ -330,8 +338,8 @@ if (isset($normal)) {
                                                 class="fa fa-facebook"></span></a>
                                     </li>
                                     <li>
-                                        <astyle="color: gray;" href="#"><span class="fa fa-twitter"></span>
-                                            </astyle=>
+                                        <a style="color: gray;" href="#"><span class="fa fa-twitter"></span>
+                                        </a>
                                     </li>
                                     <li>
                                         <a style="color: gray;" href="#"><span
@@ -351,10 +359,6 @@ if (isset($normal)) {
 
 
 
-        <!-- Scroll Top Button -->
-        <button class="scroll-top tran3s">
-            <i class="fa fa-angle-up" aria-hidden="true"></i>
-        </button>
 
 
 

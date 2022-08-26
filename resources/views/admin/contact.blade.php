@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
-    @push('title')
-        Contact Us
-    @endpush
+@push('title')
+    Contact Us
+@endpush
 @section('content')
     {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
 
@@ -33,28 +33,24 @@
                             <i class="fa fa-envelope"></i>
                             <h3>Email Us:</h3>
                             <a
-                                href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#88e0ede4e4e7c8edf2e1e7a6ebe7e5"><span
-                                    class="__cf_email__"
-                                    data-cfemail="adc5c8c1c1c2edc8d7c4c283cec2c0">[email&#160;protected]</span></a>
-                            <a
-                                href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#325b5c545d7257485b5d1c515d5f"><span
-                                    class="__cf_email__"
-                                    data-cfemail="b2dbdcd4ddf2d7c8dbdd9cd1dddf">[email&#160;protected]</span></a>
+                                href="mailto:{{ $global_setting->site_email }}"><span>{{ $global_setting->site_email }}</span></a>
+
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="single-contact-info">
                             <i class="fa fa-phone"></i>
                             <h3>Call Us:</h3>
-                            <a href="tel:+1-(123)-456-7890">Tel. +1 (123) 456 7890</a>
-                            <a href="tel:+1-(514)-312-6678">Tel. +1 (514) 312-6678</a>
+                            <a href="tel:{{ $global_setting->phone }}">Tel {{ $global_setting->phone }}</a>
+                            <a href="tel:{{ $global_setting->phone_ne }}">Tel. {{ $global_setting->phone_ne }}</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="single-contact-info">
                             <i class="fa fa-location-arrow"></i>
-                            <h3>London</h3>
-                            <a href="#">9170 Millbrook Rd, Newark, IL 60541</a>
+                            <h3>Address</h3>
+                            <a href="#"> {{ $global_setting->website_full_address }}
+                                {{ $global_setting->address_ne }}</a>
                         </div>
                     </div>
 
@@ -101,8 +97,8 @@
                         </div>
                     </div>
 
-                
-                   
+
+
                     {{-- mmessage --}}
                     <div class="col-lg-12 col-md-12">
                         <div class="form-group">
@@ -114,8 +110,8 @@
                     <div class="send-message-boxs">
                         <button>Send Message</button>
                     </div>
-                 </form>
-                </div>
+            </form>
+        </div>
     </section>
 
 
