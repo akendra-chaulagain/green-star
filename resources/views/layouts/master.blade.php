@@ -241,7 +241,7 @@ if (isset($normal)) {
                 <div class="footer-top clearfix">
                     <div class="top-right clearfix">
                         <div class="scroll-to-top scroll-to-target" data-target="html">
-                          
+
                         </div>
                     </div>
                 </div>
@@ -259,10 +259,7 @@ if (isset($normal)) {
                                     {{ $global_setting->page_description }}
                                 </div>
 
-                                <div class="copyright-text">
-                                    Copyrights &copy; 2022
-                                    <a target="_blank" href="https://radiantnepal.com/">Radiant InfoTech Nepal.</a>
-                                </div>
+
                             </div>
                         </div>
 
@@ -298,27 +295,29 @@ if (isset($normal)) {
                                 </div>
                                 <div class="widget-content">
                                     <div class="row clearfix">
-                                        <div class="column col-lg-6 col-md-6 col-sm-12">
-                                            <ul>
-                                                <li>
-                                                    <i class="flaticon-direction-signs"></i>
-                                                    {{-- <span> </span> --}}
+                                        <div class="column col-lg-12 col-md-6 col-sm-12">
+
+                                            <div class="footer_address">
+                                                <i class="fa fa-location-arrow"></i>
+                                                <div>
                                                     {{ $global_setting->website_full_address }}
                                                     {{ $global_setting->address_ne }}
-                                                </li>
-                                                <li>
-                                                    <i class="flaticon-multimedia-1"></i>
-                                                    <a
-                                                        href="mailto:{{ $global_setting->site_email }}">{{ $global_setting->site_email }}</a>
-                                                </li>
-                                                <li>
-                                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                                    <a
-                                                        href="tel:{{ $global_setting->phone }}">{{ $global_setting->phone }}</a>
-                                                    / <a
-                                                        href="tel:{{ $global_setting->phone_ne }}">{{ $global_setting->phone_ne }}</a>
-                                                </li>
-                                            </ul>
+                                                </div>
+
+                                            </div>
+                                            <div class="footer_address mt-3">
+                                                <i class="fa fa-envelope"></i>
+                                                <a
+                                                    href="mailto:{{ $global_setting->site_email }}">{{ $global_setting->site_email }}</a>
+                                            </div>
+                                            <div class="footer_address mt-3">
+                                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                                <a
+                                                    href="tel:{{ $global_setting->phone }}">{{ $global_setting->phone }}</a>
+                                                / <a
+                                                    href="tel:{{ $global_setting->phone_ne }}">{{ $global_setting->phone_ne }}</a>
+                                            </div>
+
                                         </div>
 
                                     </div>
@@ -331,6 +330,7 @@ if (isset($normal)) {
                             <div class="footer-widget news-widget">
                                 <div class="footer-title">
                                     <h2>Follow us</h2>
+                                    {{-- <h1>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, ducimus.  </h1> --}}
                                 </div>
                                 <ul class="social-icon-two">
                                     <li>
@@ -353,7 +353,12 @@ if (isset($normal)) {
                             </div>
                         </div>
                     </div>
+
                 </div>
+            </div>
+            <div class="copyright-text text-center">
+                Copyrights &copy; 2022 & Developed By
+                <a target="_blank" href="https://radiantnepal.com/">Radiant InfoTech Nepal.</a>
             </div>
         </footer>
 

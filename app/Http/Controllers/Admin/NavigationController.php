@@ -47,7 +47,8 @@ class NavigationController extends Controller
             'alias' => 'required|unique:navigations',
             'caption' => 'required',
             'icon_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10240',
-            'banner_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10240'
+            'banner_image' => 'mimes:jpeg,png,jpg,gif,svg,webp|max:10240'
+
 
         ]);
 
@@ -115,7 +116,7 @@ class NavigationController extends Controller
             'nav_name' => 'required|min:3',
             'caption' => 'required',
             'icon_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10240',
-            'banner_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10240'
+            'banner_image' => 'mimes:jpeg,png,jpg,gif,svg,webp|max:10240'
             
         ]);
         $request->offsetUnset('_token');

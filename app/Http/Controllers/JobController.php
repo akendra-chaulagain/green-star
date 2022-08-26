@@ -45,7 +45,7 @@ class JobController extends Controller
             'company_name' => 'required',
             'salary' => 'required',
             'icon_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10240',
-            'banner_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10240'
+            'banner_image' => 'mimes:jpeg,png,jpg,gif,svg|max:10240'
 
         ]);
         //get job details and store it in another table "
@@ -126,7 +126,7 @@ class JobController extends Controller
             'nav_name' => 'required|min:3',
             'caption' => 'required',
             'icon_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10240',
-            'banner_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10240'
+            'banner_image' => 'mimes:jpeg,png,jpg,gif,svg|max:10240'
             
         ]);
         //get job details and store it in another table "

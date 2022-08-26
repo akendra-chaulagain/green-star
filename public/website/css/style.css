@@ -646,10 +646,9 @@ img {
 }
 
 .main-header .logo img {
-  height: 8vh;
   border-radius: 50px;
+  height: 68px;
 }
-
 .main-header .call-btn {
   position: relative;
   float: left;
@@ -1330,13 +1329,22 @@ img {
   padding: 10px 28px;
 }
 
-.hidden-bar .copyright-text {
+ .copyright-text {
   position: relative;
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
-  color: #6ebb3e;
+  /* color: #6ebb3e; */
   font-weight: 400;
+  padding: 30px;
+}
+.copyright-text a{
+  color: #6ebb3e;
+  text-decoration: none;
+
+}
+.footer-list li a{
+  text-decoration: none;
 }
 
 .form-back-drop {
@@ -2242,10 +2250,17 @@ display: none;
 }
 .service-block .inner-box img {
      min-height: 180px;
-    max-height: 180px;
-    
+    width: 100%;
 }
 
+
+@media only screen and (max-width: 575px) {
+ .service-block .inner-box img {
+     min-height: 180px;
+    max-height:100%;
+    
+}
+}
 .service-block .inner-box .overlay-box:before {
   position: absolute;
   left: 0;
@@ -9955,8 +9970,8 @@ display: none;
 
 
 .footer_logo img {
-  height: 12vh;
   border-radius: 50%;
+  height: 90px;
 }
 .contact_map_section{
   width: 100%;
@@ -9967,11 +9982,11 @@ display: none;
 
 
 .job_cat_box{
-  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+/* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
   border-bottom: 1px solid whitesmoke;
-  display: flex;
   
 }
+
 
 .job_cat_box img{
   padding: 30px;
@@ -9991,7 +10006,6 @@ display: none;
 .job_cat_data{
   display: flex;
 align-items: center;
-/* text-align: center; */
 }
 .job_cat_data a{
 text-decoration: none;
@@ -9999,13 +10013,19 @@ text-decoration: none;
 }
 
 .apply-button{
-  color: #81C360;
+  color: white;
   text-decoration: none;
   margin-top: 10px;
-  
+  background-color: #81C360;
+      display: flex;
+    justify-content: center;
+    border-radius: 3px;
+    padding: 1px;
 }
+  
+
 .apply-button:hover{
-  color: black;
+  color: gray;
 }
 
 .job_cat_data_right_text,
@@ -10368,4 +10388,27 @@ text-decoration: none;
     color: white;
     cursor: pointer;
     margin-top: 10px;
+}
+
+
+.footer_address{
+  display: flex;
+  color: gray;
+
+}
+.footer_address i{
+  color: #70BA3D;
+  margin-right: 10px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.footer_address  a{
+  text-decoration: none;
+  color: gray;
+}
+
+.social-icon-two li a{
+  font-size: 19px;
 }

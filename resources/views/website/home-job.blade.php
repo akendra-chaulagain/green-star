@@ -41,7 +41,7 @@
                                        <span>Contract : {{ $job->getJob->contract_time ?? '' }} Year(s)</span>
                                        <a href="/jobapply/{{ $job->nav_name }}" class="apply-button"
                                            target="_blank">Apply Now</a>
-                                   </div> <!-- /.text -->
+                                   </div> 
                                </div>
                            </div>
                             </div>

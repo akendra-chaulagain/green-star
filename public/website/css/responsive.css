@@ -573,7 +573,10 @@
   }
 
   .banner-carousel .slide-item {
-    padding: 150px 0;
+    /* padding: 150px 0; */
+    max-height: 530px;
+    min-height: 530px;
+
   }
 
   .banner-carousel h2 {
