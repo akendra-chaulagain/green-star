@@ -32,7 +32,7 @@ if (isset($normal)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <!-----SEO--------->
 
-    <title>{{ $seo->page_titile ?? $global_setting->page_title }}</title>
+    <title>{{ $seo->page_titile ?? $global_setting->page_title }} || @stack('title') </title>
     <meta name="title" content="{{ $seo->page_titile ?? $global_setting->page_title }}">
     <meta name="description" content="{{ $seo->page_description ?? $global_setting->page_description }}">
     <meta name="keywords" content="{{ $seo->page_keyword ?? $global_setting->page_keyword }}">

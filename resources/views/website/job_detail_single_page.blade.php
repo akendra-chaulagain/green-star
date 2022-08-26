@@ -1,5 +1,7 @@
  @extends('layouts.master')
-
+    @push('title')
+      Job Description
+    @endpush
  @section('content')
      <section class="page-title"
          style="background-image:   linear-gradient(

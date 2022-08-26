@@ -1,6 +1,8 @@
       @extends('layouts.master')
 
-
+    @push('title')
+       Jobs
+    @endpush
 
       @section('content')
           <section class="page-title"

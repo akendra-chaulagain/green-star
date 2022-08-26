@@ -1,5 +1,7 @@
  @extends('layouts.master')
-
+    @push('title')
+       Home
+    @endpush
 
  @section('content')
      @include('website.slider')

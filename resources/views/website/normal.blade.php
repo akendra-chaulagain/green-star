@@ -1,6 +1,8 @@
  @extends('layouts.master')
 
-
+    @push('title')
+       {{ $normal->caption }}
+    @endpush
 
  @section('content')
      <!--Page Title-->
