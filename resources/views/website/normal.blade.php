@@ -1,8 +1,8 @@
  @extends('layouts.master')
 
-    @push('title')
-       {{ $normal->caption }}
-    @endpush
+ @push('title')
+     {{ $normal->caption }}
+ @endpush
 
  @section('content')
      <!--Page Title-->
@@ -32,8 +32,8 @@
                  <!-- Content Column -->
                  <div
                      class=" @if ($normal->banner_image != null) content-column col-lg-6 col-md-12 col-sm-12 @else  col-lg-12 col-md-12 col-sm-12 @endif">
-                     <div class="inner-column">
-                         <h2 style="color:#6DB940 " class="mb-3"> <span>{{ $normal->caption }}</span> </h2>
+                     <div class="inner-column normal_page">
+                         <h2 style="color:#6DB940"> <span>{{ $normal->caption }}</span> </h2>
                          <div class="text">{!! $normal->long_content !!}</div>
                      </div>
                  </div>

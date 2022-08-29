@@ -10515,3 +10515,7 @@ text-decoration: none;
     width: 100%;
 }
 }
+
+.normal_page h2{
+  margin-bottom: 25px;
+}
