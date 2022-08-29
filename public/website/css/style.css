@@ -1883,6 +1883,12 @@ img {
   position: relative;
   margin-bottom: 40px;
 }
+.single_job_text h6{
+      font-weight: 700;
+    letter-spacing: 2px;
+    color: #6DBA3D;
+    font-size: 19px;
+}
 
 .about-us .content-column .inner-column {
   padding-right: 50px;
