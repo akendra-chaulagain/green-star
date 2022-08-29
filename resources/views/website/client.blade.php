@@ -13,7 +13,7 @@
                  <h1>Our Valuable Clients</h1>
              </div>
              <ul class="page-breadcrumb">
-                 <li><a href="index-2.html">Home</a></li>
+                 <li><a href="/">Home</a></li>
                  <li>Client</li>
              </ul>
          </div>

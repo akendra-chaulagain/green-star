@@ -315,10 +315,14 @@ class HomeController extends Controller
         if ($subcategory_type == "Photo Gallery") {
             //return "return to page gallary";
             $photos = Navigation::query()->where('parent_page_id', $subcategory_id)->where('page_status', '1')->latest()->get();
-            return view("website.gallery")->with(['partners' => $partners, 'photos' => $photos, 'jobs' => $jobs, 'menus' => $menus, 'sliders' => $sliders, 'about' => $About, 'global_setting' => $global_setting, 'slug_detail' => $slug_detail]);
+            return view('website.gallery')->with(['partners' => $partners, 'photos' => $photos, 'jobs' => $jobs, 'menus' => $menus, 'sliders' => $sliders, 'about' => $About, 'global_setting' => $global_setting, 'slug_detail' => $slug_detail]);
         } elseif ($subcategory_type == "Video Gallery") {
             $photos = NavigationVideoItems::where('navigation_id', $subcategory_id)->get();
             return view("website.video_gallery")->with(["partners" => $partners, 'photos' => $photos, 'jobs' => $jobs, 'menus' => $menus, 'sliders' => $sliders, 'about' => $About, 'global_setting' => $global_setting, 'slug_detail' => $slug_detail]);
+
+
+
+            
         } elseif ($subcategory_type == "Job") {
             //return "return to view job";
             return view("website.jobsCategory")->with(["partners" => $partners, 'jobs' => $jobs, 'menus' => $menus, 'sliders' => $sliders, 'about' => $About, 'global_setting' => $global_setting, 'slug_detail' => $slug_detail]);

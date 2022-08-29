@@ -72,6 +72,8 @@ if (isset($normal)) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
+           <link rel="stylesheet" href='https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css'>
+
 
 
 </head>
@@ -170,8 +172,7 @@ if (isset($normal)) {
                                                 @endif
                                             </li>
                                         @endforeach
-
-
+                                      
                                         <li><a href="/contact">Contact</a></li>
 
                                         <!-------menu closed--->
@@ -385,6 +386,31 @@ if (isset($normal)) {
         <script src="website/js/script.js"></script>
         <!--Google Map APi Key-->
         <script src="http://maps.google.com/maps/api/js?key=AIzaSyBKS14AnP3HCIVlUpPKtGp7CbYuMtcXE2o"></script>
+
+
+
+
+     <!-- gllery js -->
+     <script src="/website/js/gallery/picturefill.min.js"></script>
+     <script src="/website/js/gallery/lightgallery.js"></script>
+     <script src="/website/js/gallery/lg-pager.js"></script>
+     <script src="/website/js/gallery/lg-autoplay.js"></script>
+     <script src="/website/js/gallery/lg-fullscreen.js"></script>
+     <script src="/website/js/gallery/lg-zoom.js"></script>
+     <script src="/website/js/gallery/lg-hash.js"></script>
+     <script src="/website/js/gallery/lg-share.js"></script>
+     <!--End gllery js -->
+
+     <!--Construction JS-->
+     {{-- <script src="js/custom.js"></script> --}}
+
+     <script>
+         lightGallery(document.getElementById('lightgallery'));
+
+     </script>
+
+
+
         <script src="website/js/map-script.js"></script>
         <!--End gllery js -->
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
