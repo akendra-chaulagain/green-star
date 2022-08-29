@@ -914,9 +914,19 @@
 .fa-angle-up:before {
   content: "\f106";
 }
+
 .fa-angle-down:before {
   content: "\f107";
+  /* display: none; */
 }
+
+/* @media only screen and (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+} */
+
+
 .fa-desktop:before {
   content: "\f108";
 }

@@ -12,9 +12,9 @@
                           <div class="text">
                               {!! $message->long_content !!}
                           </div>
-                          <div class="author-boxs">
+                          {{-- <div class="author-boxs">
                               <span>Read More</span>
-                          </div>
+                          </div> --}}
 
                       </div>
                   </div>

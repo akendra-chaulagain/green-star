@@ -18,7 +18,8 @@
                            <div class="row">
                                <div class="col-sm-3">
                                    <div class="Job_img-box">
-                                       <a href="{{ route('single_job', $job->nav_name) }}"><img src="{{ $job->banner_image }}" alt=""></a>
+                                       <a href="{{ route('single_job', $job->nav_name) }}"><img
+                                               src="{{ $job->banner_image }}" alt=""></a>
                                    </div>
                                </div>
                                <div class="col-sm-5 job_cat_data">
@@ -41,14 +42,16 @@
                                        <span>Contract : {{ $job->getJob->contract_time ?? '' }} Year(s)</span>
                                        <a href="/jobapply/{{ $job->nav_name }}" class="apply-button"
                                            target="_blank">Apply Now</a>
-                                   </div> 
+                                   </div>
                                </div>
                            </div>
-                            </div>
+                       </div>
 
                    </div>
                @endforeach
-
+               <div class="view-all-btn  text-center m-4">
+                   <a href="/all-jobs" class="theme-button-one">View All</a>
+               </div>
 
            </div>
 

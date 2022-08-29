@@ -32,7 +32,7 @@ if (isset($normal)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <!-----SEO--------->
 
-    <title>  @stack('title') | {{ $seo->page_titile ?? $global_setting->page_title }}</title>
+    <title> @stack('title') | {{ $seo->page_titile ?? $global_setting->page_title }}</title>
     <meta name="title" content="{{ $seo->page_titile ?? $global_setting->page_title }}">
     <meta name="description" content="{{ $seo->page_description ?? $global_setting->page_description }}">
     <meta name="keywords" content="{{ $seo->page_keyword ?? $global_setting->page_keyword }}">
@@ -100,17 +100,18 @@ if (isset($normal)) {
                         <div class="top-right clearfix">
                             <ul class="social-icon-one clearfix">
                                 <li>
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a target="_blank" href="{{ $global_setting->facebook ?? '' }}"><i
+                                            class="fa fa-facebook"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a target="_blank" href="{{ $global_setting->twitter ?? '' }}"><i
+                                            class="fa fa-twitter"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a target="_blank" href="{{ $global_setting->linkedin ?? '#' }}"><i
+                                            class="fa fa-instagram"></i></a>
                                 </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-whatsapp"></i></a>
-                                </li>
+
                             </ul>
                         </div>
                     </div>
@@ -157,7 +158,7 @@ if (isset($normal)) {
                                                 href="/">Home</a></li>
                                         @foreach ($menus as $menu)
                                             @php $submenus = $menu->childs; @endphp
-                                            <li class="dropdowns" @if (isset($slug_detail) && $slug_detail->nav_name == $menu->nav_name)  @endif><a
+                                            <li class="dropdown" @if (isset($slug_detail) && $slug_detail->nav_name == $menu->nav_name)  @endif><a
                                                     @if ($submenus->count() > 0) href="#" @else href="{{ route('category', $menu->nav_name) }}" @endif>{{ $menu->caption }}</a>
                                                 @if ($submenus->count() > 0)
                                                     <ul>
@@ -197,15 +198,15 @@ if (isset($normal)) {
                     <!--Right Col-->
                     <div class="pull-right">
                         <!-- Main Menu -->
-                        <nav class="main-menu">
+                        <nav class="main-menu ">
                             <div class="navbar-collapse show collapse clearfix">
                                 <ul class="navigation clearfix">
-                                    <!-------menu------>
+
                                     <li @if (!isset($slug_detail)) class="active" @endif><a
                                             href="/">Home</a></li>
                                     @foreach ($menus as $menu)
                                         @php $submenus = $menu->childs; @endphp
-                                        <li class="dropdowns" @if (isset($slug_detail) && $slug_detail->nav_name == $menu->nav_name)  @endif><a
+                                        <li class="dropdown" @if (isset($slug_detail) && $slug_detail->nav_name == $menu->nav_name)  @endif><a
                                                 @if ($submenus->count() > 0) href="#" @else href="{{ route('category', $menu->nav_name) }}" @endif>{{ $menu->caption }}</a>
                                             @if ($submenus->count() > 0)
                                                 <ul>
@@ -253,7 +254,10 @@ if (isset($normal)) {
                         <div class="footer-column col-lg-3 col-md-12 col-sm-12">
                             <div class="footer-widget logo-widget">
                                 <div class="footer_logo">
-                                    <a href="index-2.html"><img src="website/images/logo.png" alt="" /></a>
+                                    <a href="index-2.html"><img src="/uploads/icons/{{ $global_setting->site_logo }}"
+                                            alt="footer_img" /></a>
+
+
                                 </div>
                                 <div class="text">
                                     {{ $global_setting->page_description }}
@@ -314,8 +318,8 @@ if (isset($normal)) {
                                                 <i class="fa fa-phone" aria-hidden="true"></i>
                                                 <a
                                                     href="tel:{{ $global_setting->phone }}">{{ $global_setting->phone }}</a>
-                                                / <a
-                                                    href="tel:{{ $global_setting->phone_ne }}">{{ $global_setting->phone_ne }}</a>
+                                                {{-- / <a
+                                                    href="tel:{{ $global_setting->phone_ne }}">{{ $global_setting->phone_ne }}</a> --}}
                                             </div>
 
                                         </div>
@@ -334,21 +338,20 @@ if (isset($normal)) {
                                 </div>
                                 <ul class="social-icon-two">
                                     <li>
-                                        <a style="color: gray;" href="#"><span
+                                        <a style="color: gray;"href="{{ $global_setting->facebook ?? '/' }}"><span
                                                 class="fa fa-facebook"></span></a>
                                     </li>
                                     <li>
-                                        <a style="color: gray;" href="#"><span class="fa fa-twitter"></span>
+                                        <a style="color: gray;" href="{{ $global_setting->twitter ?? '/' }}"><span
+                                                class="fa fa-twitter"></span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a style="color: gray;" href="#"><span
+                                        <a style="color: gray;" href="{{ $global_setting->linkedin ?? '/' }}"><span
                                                 class="fa fa-instagram"></span></a>
                                     </li>
-                                    <li>
-                                        <a style="color: gray;" href="#"><span
-                                                class="fa fa-whatsapp"></span></a>
-                                    </li>
+
+
                                 </ul>
                             </div>
                         </div>

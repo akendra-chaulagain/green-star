@@ -204,7 +204,8 @@
 .flaticon-send:before { content: "\f1ae"; }
 .flaticon-shopping-cart:before { content: "\f1af"; }
 .flaticon-download-content:before { content: "\f1b0"; }
-.flaticon-menu-1:before { content: "\f1b1"; }
+.flaticon-menu-1:before { content: "\f1b1";
+}
 .flaticon-budget:before { content: "\f1b2"; }
 .flaticon-leaf:before { content: "\f1b3"; }
 .flaticon-maple-leaf:before { content: "\f1b4"; }

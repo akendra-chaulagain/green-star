@@ -17,6 +17,9 @@
                     </div>
                 </div>
             @endforeach
+            <div class="view-all-btn text-center">
+                <a href="/job-category" class="theme-button-one">View All</a>
+            </div>
 
         </div>
     </div>

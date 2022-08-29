@@ -4,7 +4,7 @@
     Contact Us
 @endpush
 @section('content')
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
+
 
 
     <section class="page-title"
@@ -42,7 +42,7 @@
                             <i class="fa fa-phone"></i>
                             <h3>Call Us:</h3>
                             <a href="tel:{{ $global_setting->phone }}">Tel {{ $global_setting->phone }}</a>
-                            <a href="tel:{{ $global_setting->phone_ne }}">Tel. {{ $global_setting->phone_ne }}</a>
+                            {{-- <a href="tel:{{ $global_setting->phone_ne }}">Tel. {{ $global_setting->phone_ne }}</a> --}}
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">

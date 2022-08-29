@@ -1,8 +1,8 @@
       @extends('layouts.master')
 
-    @push('title')
-       Jobs
-    @endpush
+      @push('title')
+          Jobs
+      @endpush
 
       @section('content')
           <section class="page-title"
@@ -10,27 +10,29 @@
                   rgba(27, 40, 92, 0.7),
                   rgba(28, 35, 61, 0.7)
                 ) ,url(images/aboutus/about-nepal.jpg)">
+
               <div class="auto-container">
                   <div class="title-box">
-                      <h1>{{ $slug_detail->caption }}</h1>
+                      <h1>{{ $slug_detail->caption ?? 'All Jobs' }}</h1>
                   </div>
-                  <ul class="page-breadcrumb">
-                      <li><a href="index-2.html">Home</a></li>
 
-                      <li>{{ $slug_detail->caption }}</li>
+                  <ul class="page-breadcrumb">
+                      <li><a href="/">Home</a></li>
+                      <li>{{ $slug_detail->caption ?? 'All Jobs' }}</li>
                   </ul>
               </div>
           </section>
 
-          <section class="services-section">
+          {{-- <section class="services-section">
               <div class="auto-container">
                   <div class="sec-title style-two">
                       <div class="row clearfix">
                           <div class="title-column col-lg-4 col-md-12 col-sm-12">
                               <h2 style="color: #6ebb3e">
-                                  @if (isset($slug_detail))
-                                      {{ $slug_detail->caption ?? '' }}
-                                  @endif
+
+                               
+                                      {{ $slug_detail->caption ?? 'All Jobs' }}
+                                 
                               </h2>
                           </div>
                           <div class="text-column col-lg-8 col-md-12 col-sm-12">
@@ -56,7 +58,7 @@
                                           </div>
                                       </div>
                                       <div class="col-sm-5 job_cat_data">
-                                          <a href="{{ route('single_job', $job->nav_name) }}">
+                                          <a href="{{ route('single_job', $job->nav_name ?? " ") }}">
                                               <div class="single_job_text">
                                                   <h6>{{ $job->caption }}</h6>
 
@@ -65,7 +67,7 @@
                                                   <span class="mt-1"><i
                                                           class="fa fa-map-marker "></i>{{ $job->getJob->country ?? 'null' }}</span>
 
-                                              </div> <!-- /.text -->
+                                              </div> 
                                           </a>
                                       </div>
                                       <div class="col-sm-4 job_cat_data_right">
@@ -75,7 +77,7 @@
                                               <span>Contract : {{ $job->getJob->contract_time ?? '' }} Year(s)</span>
                                               <a href="/jobapply/{{ $job->nav_name }}" class="apply-button"
                                                   target="_blank">Apply Now</a>
-                                          </div> <!-- /.text -->
+                                          </div> 
                                       </div>
                                   </div>
                               </div>
@@ -86,12 +88,9 @@
 
 
 
-                      <!-- view all services button -->
-                      {{-- <div style="display: flex; justify-content: center; width: 100%" class="link-box">
-                        <a href="services.html" class="theme-btn btn-style-one">Load More</a>
-                    </div> --}}
+                   
                   </div>
 
               </div>
-          </section>
+          </section> --}}
       @endsection
