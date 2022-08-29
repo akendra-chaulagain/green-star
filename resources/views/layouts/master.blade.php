@@ -100,15 +100,14 @@ if (isset($normal)) {
                         <div class="top-right clearfix">
                             <ul class="social-icon-one clearfix">
                                 <li>
-                                    <a target="_blank" href="{{ $global_setting->facebook ?? '' }}"><i
+                                    <a tar href="{{ $global_setting->facebook ?? '' }}"><i
                                             class="fa fa-facebook"></i></a>
                                 </li>
                                 <li>
-                                    <a target="_blank" href="{{ $global_setting->twitter ?? '' }}"><i
-                                            class="fa fa-twitter"></i></a>
+                                    <a href="{{ $global_setting->twitter ?? '' }}"><i class="fa fa-twitter"></i></a>
                                 </li>
                                 <li>
-                                    <a target="_blank" href="{{ $global_setting->linkedin ?? '#' }}"><i
+                                    <a href="{{ $global_setting->linkedin ?? '#' }}"><i
                                             class="fa fa-instagram"></i></a>
                                 </li>
 
@@ -198,10 +197,10 @@ if (isset($normal)) {
                     <!--Right Col-->
                     <div class="pull-right">
                         <!-- Main Menu -->
-                        <nav class="main-menu ">
+                        <nav class="main-menu">
                             <div class="navbar-collapse show collapse clearfix">
                                 <ul class="navigation clearfix">
-
+                                    <!-------menu------>
                                     <li @if (!isset($slug_detail)) class="active" @endif><a
                                             href="/">Home</a></li>
                                     @foreach ($menus as $menu)
@@ -254,7 +253,7 @@ if (isset($normal)) {
                         <div class="footer-column col-lg-3 col-md-12 col-sm-12">
                             <div class="footer-widget logo-widget">
                                 <div class="footer_logo">
-                                    <a href="index-2.html"><img src="/uploads/icons/{{ $global_setting->site_logo }}"
+                                    <a href="/"><img src="/uploads/icons/{{ $global_setting->site_logo }}"
                                             alt="footer_img" /></a>
 
 
@@ -338,20 +337,20 @@ if (isset($normal)) {
                                 </div>
                                 <ul class="social-icon-two">
                                     <li>
-                                        <a style="color: gray;"href="{{ $global_setting->facebook ?? '/' }}"><span
+                                        <a style="color: gray;" href="{{ $global_setting->facebook ?? '' }}"><span
                                                 class="fa fa-facebook"></span></a>
                                     </li>
                                     <li>
-                                        <a style="color: gray;" href="{{ $global_setting->twitter ?? '/' }}"><span
+                                        <a target="_blank" style="color: gray;"
+                                            href="{{ $global_setting->twitter ?? '' }}"><span
                                                 class="fa fa-twitter"></span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a style="color: gray;" href="{{ $global_setting->linkedin ?? '/' }}"><span
+                                        <a target="_blank" style="color: gray;"
+                                            href="{{ $global_setting->linkedin ?? '#' }}"><span
                                                 class="fa fa-instagram"></span></a>
                                     </li>
-
-
                                 </ul>
                             </div>
                         </div>

@@ -9,7 +9,7 @@
               style="background-image:   linear-gradient(
                   rgba(27, 40, 92, 0.7),
                   rgba(28, 35, 61, 0.7)
-                ) ,url(images/aboutus/about-nepal.jpg)">
+                ) ,url('https://images.pexels.com/photos/1181401/pexels-photo-1181401.jpeg?auto=compress&cs=tinysrgb&w=1600')">
 
               <div class="auto-container">
                   <div class="title-box">
@@ -23,7 +23,7 @@
               </div>
           </section>
 
-          {{-- <section class="services-section">
+          <section class="services-section">
               <div class="auto-container">
                   <div class="sec-title style-two">
                       <div class="row clearfix">
@@ -92,5 +92,5 @@
                   </div>
 
               </div>
-          </section> --}}
+          </section>
       @endsection

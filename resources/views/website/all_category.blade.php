@@ -10,10 +10,10 @@
          style="background-image:   linear-gradient(
                   rgba(27, 40, 92, 0.7),
                   rgba(28, 35, 61, 0.7)
-                ) ,url(images/aboutus/about-nepal.jpg)">
+                ) ,url('https://images.pexels.com/photos/1181401/pexels-photo-1181401.jpeg?auto=compress&cs=tinysrgb&w=1600')">
          <div class="auto-container">
              <div class="title-box">
-                 <h1>Category</h1>
+                 <h1>Jobs Category</h1>
              </div>
              <ul class="page-breadcrumb">
                  <li><a href="/">Home</a></li>

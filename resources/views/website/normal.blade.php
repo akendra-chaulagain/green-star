@@ -10,7 +10,7 @@
          style="background-image:   linear-gradient(
                   rgba(27, 40, 92, 0.7),
                   rgba(28, 35, 61, 0.7)
-                ) ,url(images/aboutus/about-nepal.jpg)">
+                ) ,url('https://images.pexels.com/photos/1181401/pexels-photo-1181401.jpeg?auto=compress&cs=tinysrgb&w=1600')">
          <div class="auto-container">
              <div class="title-box">
                  <h1>{{ $normal->caption }}</h1>
@@ -33,7 +33,7 @@
                  <div
                      class=" @if ($normal->banner_image != null) content-column col-lg-6 col-md-12 col-sm-12 @else  col-lg-12 col-md-12 col-sm-12 @endif">
                      <div class="inner-column">
-                         <h2> <span>{{ $normal->caption }}</span> </h2>
+                         <h2 style="color:#6DB940 " class="mb-3"> <span>{{ $normal->caption }}</span> </h2>
                          <div class="text">{!! $normal->long_content !!}</div>
                      </div>
                  </div>

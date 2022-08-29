@@ -7,7 +7,7 @@
          style="background-image:   linear-gradient(
                                   rgba(27, 40, 92, 0.7),
                                   rgba(28, 35, 61, 0.7)
-                                ) ,url(website/images/client/clientTop.webp)">
+                                ) ,url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600')">
          <div class="auto-container">
              <div class="title-box">
                  <h1>Our Valuable Clients</h1>
