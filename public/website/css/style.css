@@ -1873,7 +1873,10 @@ img {
 
 .about-us {
   position: relative;
-  padding: 25px 0 30px;
+  padding: 80px 0 30px;
+}
+.normal_page h2{
+  margin-top: -40px;
 }
 
 .about-us .content-column {
