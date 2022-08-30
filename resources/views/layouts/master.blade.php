@@ -184,8 +184,8 @@ if (isset($normal)) {
                 <div class="auto-container clearfix">
                     <!--Logo-->
                     <div class="logo pull-left">
-                        <a href="index-2.html" title=""><img src="images/logo.png" alt=""
-                                title="" /></a>
+                        <a href="/" title=""><img src="/uploads/icons/{{ $global_setting->site_logo }}"
+                                        alt="_logo" title="" /></a>
                     </div>
                     <!--Right Col-->
                     <div class="pull-right">
