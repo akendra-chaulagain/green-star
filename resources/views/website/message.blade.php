@@ -23,7 +23,7 @@
                   <div class="video-column col-lg-6 col-md-12 col-sm-12">
                       <div class="inner-column">
                           <figure class="image wow fadeIn">
-                              <img src="{{ $message->banner_image }}" alt="banner_image" />
+                              <img src="{{ $message->banner_image ?? " " }}" alt="banner_image" />
                           </figure>
                       </div>
                   </div>
