@@ -1,4 +1,4 @@
-/* Ground Work - Landscaping Services HTML Template  */
+
 
 @media only screen and (max-width: 1500px) {
   .feature-block .inner-box {
@@ -72,7 +72,7 @@
 @media only screen and (min-width: 768px) {
   .main-menu .navigation > li > ul,
   .main-menu .navigation > li > ul > li > ul {
-    display: block !important;
+    display: block ;
     visibility: hidden;
     opacity: 0;
   }
@@ -97,7 +97,7 @@
   }
 
   .sticky-header {
-    display: none !important;
+    display: none ;
   }
 
   .main-header .top-right {
@@ -178,11 +178,11 @@
   }
 
   .project-single .info-column .inner-column {
-    position: relative !important;
-    left: 0px !important;
-    top: 0px !important;
-    width: 100% !important;
-    transform: translate(0px, 0px) !important;
+    position: relative ;
+    left: 0px ;
+    top: 0px ;
+    width: 100% ;
+    transform: translate(0px, 0px) ;
     margin-top: 50px;
   }
 
@@ -192,11 +192,11 @@
   }
 
   .process-block-two .image-column .image-box .count {
-    position: relative !important;
-    display: inline-block !important;
-    left: 0 !important;
-    right: 0 !important;
-    margin: 0 auto !important;
+    position: relative ;
+    display: inline-block ;
+    left: 0 ;
+    right: 0 ;
+    margin: 0 auto ;
     top: 0;
   }
 
@@ -235,12 +235,19 @@
   .statement-block,
   .statement-block:hover {
     display: block;
-    width: 100% !important;
+    width: 100% ;
     margin-bottom: 15px;
   }
 }
 
-@media only screen and (max-width: 767px) {
+
+ @media (min-width: 992px){
+.navbar-expand-md .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+}
+} 
+@media only screen and (max-width: 991px) {
   .main-header .main-box {
     padding: 0 15px;
   }
@@ -281,6 +288,7 @@
     width: 100%;
     padding: 10px 0px 10px;
     right: 0px;
+    min-height: 60px;
   }
 
   .main-menu .collapse {
@@ -323,24 +331,26 @@
     line-height: 1.2em;
     color: #25723e;
   }
-
+  .navbar-toggler .icon:before{
+    content: "\f1b1";
+  }
   .navbar-light .navbar-toggler {
     border: 1px solid #999999;
   }
 
   .main-menu .navbar-collapse > .navigation {
-    float: none !important;
-    margin: 0px !important;
-    width: 100% !important;
+    float: none ;
+    margin: 0px ;
+    width: 100% ;
     display: block;
     border: 1px solid #ffffff;
     border-top: none;
   }
 
   .main-menu .navbar-collapse > .navigation > li {
-    margin: 0px !important;
-    float: none !important;
-    padding: 0px !important;
+    margin: 0px ;
+    float: none ;
+    padding: 0px ;
     width: 100%;
   }
 
@@ -350,17 +360,17 @@
   }
 
   .main-menu .navbar-collapse > .navigation > li > a {
-    padding: 10px 10px !important;
-    border: none !important;
-    font-size: 15px !important;
+    padding: 10px 10px ;
+    border: none ;
+    font-size: 15px ;
   }
 
   .main-menu .navigation li > a:after,
   .main-menu .navigation li > a:before {
-    color: #ffffff !important;
+    color: #ffffff ;
     right: 15px;
     font-size: 16px;
-    display: none !important;
+    display: none ;
   }
 
   .main-menu .navbar-collapse > .navigation > li > ul,
@@ -371,10 +381,10 @@
     visibility: visible;
     opacity: 1;
     display: none;
-    margin: 0px !important;
-    left: auto !important;
-    right: auto !important;
-    top: auto !important;
+    margin: 0px ;
+    left: auto ;
+    right: auto ;
+    top: auto ;
     padding: 0px;
     outline: none;
     width: 100%;
@@ -384,11 +394,11 @@
     -o-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
-    transition: none !important;
-    -webkit-transition: none !important;
-    -ms-transition: none !important;
-    -o-transition: none !important;
-    -moz-transition: none !important;
+    transition: none ;
+    -webkit-transition: none ;
+    -ms-transition: none ;
+    -o-transition: none ;
+    -moz-transition: none ;
     -webkit-transform: scaleY(1);
     -ms-transform: scaleY(1);
     -moz-transform: scaleY(1);
@@ -397,18 +407,18 @@
 
   .main-menu .navbar-collapse > .navigation > li > ul,
   .main-menu .navbar-collapse > .navigation > li > ul > li > ul {
-    border-top: 1px solid rgba(255, 255, 255, 1) !important;
+    border-top: 1px solid rgba(255, 255, 255, 1) ;
   }
 
   .main-menu .navbar-collapse > .navigation > li,
   .main-menu .navbar-collapse > .navigation > li > ul > li,
   .main-menu .navbar-collapse > .navigation > li > ul > li > ul > li {
-    border-top: 1px solid rgba(255, 255, 255, 1) !important;
+    border-top: 1px solid rgba(255, 255, 255, 1) ;
     border-bottom: none;
-    opacity: 1 !important;
-    top: 0px !important;
-    left: 0px !important;
-    visibility: visible !important;
+    opacity: 1 ;
+    top: 0px ;
+    left: 0px ;
+    visibility: visible ;
   }
 
   .main-menu .navbar-collapse > .navigation > li > ul > li:first-child,
@@ -420,7 +430,7 @@
     > li
     > ul
     > li:first-child {
-    border-top: none !important;
+    border-top: none ;
   }
 
   .main-menu .navbar-collapse > .navigation > li:first-child {
@@ -430,7 +440,7 @@
   .main-menu .navbar-collapse > .navigation > li > a,
   .main-menu .navbar-collapse > .navigation > li > ul > li > a,
   .main-menu .navbar-collapse > .navigation > li > ul > li > ul > li > a {
-    padding: 12px 20px !important;
+    padding: 12px 20px ;
     line-height: 22px;
     color: #ffffff;
     font-weight: 500;
@@ -451,7 +461,7 @@
   .main-menu .navbar-collapse > .navigation > li.current > a,
   .main-menu .navbar-collapse > .navigation > li.current-menu-item > a {
     background: #333333;
-    color: #ffffff !important;
+    color: #ffffff ;
     border-bottom: none;
   }
 
@@ -472,7 +482,7 @@
 
   .main-menu .navbar-collapse > .navigation li.dropdown:after,
   .main-menu .navigation > li > ul:before {
-    display: none !important;
+    display: none ;
   }
 
   .sec-title h2 {
@@ -528,7 +538,7 @@
   }
 
   .map-section {
-    background: #ffffff !important;
+    background: #ffffff ;
   }
 
   .map-section .info-column .inner-column:before {
@@ -562,6 +572,12 @@
     z-index: 10;
   }
 }
+
+
+
+
+
+
 
 @media only screen and (max-width: 599px) {
   .footer-top .top-left {
@@ -718,7 +734,7 @@
 
   .news-block-two .content-column .content,
   .news-block-three .content-box .content {
-    border-left: none !important;
+    border-left: none ;
   }
 
   .project-single .result-images .before-image {
@@ -770,3 +786,5 @@
     padding-left: 0;
   }
 }
+
+

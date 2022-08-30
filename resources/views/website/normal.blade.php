@@ -17,7 +17,6 @@
              </div>
              <ul class="page-breadcrumb">
                  <li><a href="/">Home</a></li>
-                 {{-- <li>{{ $normal->$alias }}</li> --}}
 
                  <li>{{ $normal->caption }}</li>
              </ul>
