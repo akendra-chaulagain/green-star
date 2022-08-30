@@ -379,7 +379,7 @@ if (isset($normal)) {
         <script src="/website/js/wow.js"></script>
         <script src="/website/js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="/website/js/appear.js"></script>
-        <script src="/website/js/script.js"></script>
+        {{-- <script src="/website/js/script.js"></script> --}}
 
 
         <!-- gllery js -->
