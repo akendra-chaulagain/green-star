@@ -32,7 +32,7 @@
                              <div class="row">
                                  <!----gallary data----->
                                  @foreach ($photos as $photo)
-                                     <div class="col-md-3 col-sm-4">
+                                     <div class="col-lg-3 col-md-6  col-12">
                                          <a href="{{ route('galleryview', $photo->nav_name) }}">
                                              <div class="folder">
                                                  <div class="folder-inside"
