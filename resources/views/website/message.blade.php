@@ -10,7 +10,7 @@
                           <h2 style="color: #6EBB3E">{{ $message->caption ?? " " }}</h2>
 
                           <div class="text">
-                              {!! $message->long_content !!}
+                              {!! $message->long_content ?? " " !!}
                           </div>
                           {{-- <div class="author-boxs">
                               <span>Read More</span>
