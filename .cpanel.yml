@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/greenstarcom/public/
+    - export DEPLOYPATH=/home/greenstarcom/public_html/
     - /bin/cp -r * $DEPLOYPATH
