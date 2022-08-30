@@ -72,7 +72,7 @@ if (isset($normal)) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-           <link rel="stylesheet" href='https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css'>
+    <link rel="stylesheet" href='https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css'>
 
 
 
@@ -172,7 +172,7 @@ if (isset($normal)) {
                                                 @endif
                                             </li>
                                         @endforeach
-                                      
+
                                         <li><a href="/contact">Contact</a></li>
 
                                         <!-------menu closed--->
@@ -192,8 +192,8 @@ if (isset($normal)) {
                 <div class="auto-container clearfix">
                     <!--Logo-->
                     <div class="logo pull-left">
-                        <a href="index-2.html" title=""><img src="images/logo.png" alt=""
-                                title="" /></a>
+                        <a href="/" title=""><img src="/uploads/icons/{{ $global_setting->site_logo }}"
+                                alt="_logo" title="" /></a>
                     </div>
                     <!--Right Col-->
                     <div class="pull-right">
@@ -390,24 +390,23 @@ if (isset($normal)) {
 
 
 
-     <!-- gllery js -->
-     <script src="/website/js/gallery/picturefill.min.js"></script>
-     <script src="/website/js/gallery/lightgallery.js"></script>
-     <script src="/website/js/gallery/lg-pager.js"></script>
-     <script src="/website/js/gallery/lg-autoplay.js"></script>
-     <script src="/website/js/gallery/lg-fullscreen.js"></script>
-     <script src="/website/js/gallery/lg-zoom.js"></script>
-     <script src="/website/js/gallery/lg-hash.js"></script>
-     <script src="/website/js/gallery/lg-share.js"></script>
-     <!--End gllery js -->
+        <!-- gllery js -->
+        <script src="/website/js/gallery/picturefill.min.js"></script>
+        <script src="/website/js/gallery/lightgallery.js"></script>
+        <script src="/website/js/gallery/lg-pager.js"></script>
+        <script src="/website/js/gallery/lg-autoplay.js"></script>
+        <script src="/website/js/gallery/lg-fullscreen.js"></script>
+        <script src="/website/js/gallery/lg-zoom.js"></script>
+        <script src="/website/js/gallery/lg-hash.js"></script>
+        <script src="/website/js/gallery/lg-share.js"></script>
+        <!--End gllery js -->
 
-     <!--Construction JS-->
-     {{-- <script src="js/custom.js"></script> --}}
+        <!--Construction JS-->
+        {{-- <script src="js/custom.js"></script> --}}
 
-     <script>
-         lightGallery(document.getElementById('lightgallery'));
-
-     </script>
+        <script>
+            lightGallery(document.getElementById('lightgallery'));
+        </script>
 
 
 
