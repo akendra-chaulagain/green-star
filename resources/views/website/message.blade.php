@@ -7,7 +7,7 @@
                   <!-- Content Column -->
                   <div class="content-column col-lg-6 col-md-12 col-sm-12">
                       <div class="inner-column">
-                          <h2 style="color: #6EBB3E">{{ $message->caption }}</h2>
+                          <h2 style="color: #6EBB3E">{{ $message->caption ?? " " }}</h2>
 
                           <div class="text">
                               {!! $message->long_content !!}
