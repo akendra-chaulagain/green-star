@@ -379,7 +379,7 @@ if (isset($normal)) {
         <script src="/website/js/wow.js"></script>
         <script src="/website/js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="/website/js/appear.js"></script>
-        {{-- <script src="/website/js/script.js"></script> --}}
+
 
 
         <!-- gllery js -->
@@ -391,7 +391,12 @@ if (isset($normal)) {
         <script src="/website/js/gallery/lg-zoom.js"></script>
         <script src="/website/js/gallery/lg-hash.js"></script>
         <script src="/website/js/gallery/lg-share.js"></script>
-        <script src="website/js/script.js"></script>
+
+
+
+        <script src="/website/js/script.js"></script>
+
+
 
         <script>
             lightGallery(document.getElementById('lightgallery'));
@@ -399,7 +404,7 @@ if (isset($normal)) {
 
 
 
-        <script src="website/js/map-script.js"></script>
+        {{-- <script src="website/js/map-script.js"></script> --}}
 
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         @if (Session::has('contact'))
