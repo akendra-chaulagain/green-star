@@ -1927,6 +1927,9 @@ img {
   text-align: justify;
 }
 
+.about-us ul li {
+    list-style: auto;
+}
 
 .about-us .content-column .author-boxs span a{
     font-size: 16px;
