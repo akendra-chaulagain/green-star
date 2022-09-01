@@ -12,9 +12,9 @@
                           <div class="text">
                               {!! $message->long_content ?? " " !!}
                           </div>
-                          {{-- <div class="author-boxs">
-                              <span>Read More</span>
-                          </div> --}}
+                          <div class="author-boxs">
+                              <span> <a href="/message-from-chairman">Read More</a> </span>
+                          </div>
 
                       </div>
                   </div>
