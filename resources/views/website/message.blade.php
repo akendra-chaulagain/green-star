@@ -13,7 +13,7 @@
                               {!! $message->long_content ?? " " !!}
                           </div>
                           <div class="author-boxs">
-                              <span> <a href="/message-from-chairman">Read More</a> </span>
+                              <span> <a href="/company/message-from-chairman">Read More</a> </span>
                           </div>
 
                       </div>
